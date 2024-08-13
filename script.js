@@ -93,10 +93,11 @@ function mostraPergunta() {
             mostraResultado();
             return;
         }
-    perguntaAtual = perguntas[atual];
-    caixaPerguntas.textContent = perguntaAtual.enunciado;
-    mostraAlternativas();
-
+        perguntaAtual = perguntas[atual];
+        caixaPerguntas.textContent = perguntaAtual.enunciado;
+        mostraAlternativas();
+    }
+    D
 function mostraAlternativas() {
     for (const alternativa of perguntaAtual.alternativas) {
         const botaoAlternativas = document.createElement("button");
