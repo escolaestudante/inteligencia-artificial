@@ -83,4 +83,21 @@ const perguntas = [
         ],
     },
 ];
-
+function mostraAlternativas() {
+    for (const alternativa of perguntaAtual.alternativas) {
+      const botaoAlternativas = document.createElement("button");
+      botaoAlternativas.textContent = alternativa.texto;
+      botaoAlternativas.addEventListener("click", function () {
+        atual++;
+        mostraPergunta();
+      });
+      caixaAlternativas.appendChild(botaoAlternativas);
+    }
+  }
+  function respostaSelecionada(opcaoSelecionada){
+    const afirmacoes = opcaoSelecionada.afirmacoes;
+    historiaFinal = afirmacoes;
+    atual++;
+    mostraPergunta();
+}
+mostraPergunta();
